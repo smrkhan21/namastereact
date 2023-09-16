@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Namaste React</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <!-- Using HTML -->
+
+    <!-- <div id="root">
+        <h1>Hello World</h1>
+    </div> -->
+
+    <!-- Using Javascript -->
+
+    <!--<div id="root"></div>
+    <script>
+        const heading = document.createElement("h1");
+        heading.innerHTML = "Hello World from Sameer";
+
+        const root = document.getElementById('root')
+        root.append(heading)
+    </script> -->
+
+    <!-- Using React -->
+    <h1>This head tag will not removed or replace only id root element will be replaced</h1>
+    <div id="root">
+        <h1>This code will be replaced after the react code will render (means root.rendier() will called)</h1>
+    </div> 
+    <h1>This footer will also not replaced or removed</h1>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    
+    <script src="./App.js"></script>
+</body>
+</html>
