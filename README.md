@@ -25,4 +25,4 @@
 10. *Nested Elements*
 
 11. *Why we need JSX*
-    --> So to understand JSX check EP02
+    --> So to understand JSX check *<a href="https://github.com/smrkhan21/namastereact/tree/EP02">EP02</a>*
