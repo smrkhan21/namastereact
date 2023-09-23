@@ -1,4 +1,4 @@
-$ EP01: Inception
+# EP01: Inception
 
 1. *How we can write small HTML program using HTML*
 2. *How we can write the same program using JS createElement*
