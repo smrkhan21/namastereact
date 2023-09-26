@@ -6,9 +6,11 @@ import Shimmer from "./Shimmer";
 const Body = () => {
 
     const [listOfRestaurants, setListOfRestaurants] = useState([]);
+    const [filteredRestaurants, setFilteredRestaurants] = useState([]);
+    const [searchText, setSearchText] = useState("");
 
     const filterFood = () => {
-        setListOfRestaurants(
+        setFilteredRestaurants(
             listOfRestaurants.filter(res => parseFloat(res.info.avgRating) > 4)
         )
     }
@@ -21,30 +23,35 @@ const Body = () => {
         const result = await fetch('https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.9715987&lng=77.5945627&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING');
 
         const data = await result.json();
-        // console.log(data?.data?.cards[5]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
-        setListOfRestaurants(data?.data?.cards[5]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
+
+        let apiData = data?.data?.cards[5]?.card?.card?.gridElements?.infoWithStyle?.restaurants;
+        setListOfRestaurants(apiData)
+        setFilteredRestaurants(apiData)
     }
 
-    if(listOfRestaurants.length === 0) {
-        return (
-            <div className='shimmer-body'>
-                <div className='shimmer-search'><button>Search</button></div>
-                <div className='shimmer-res-container'>
-                    <Shimmer/>
-                </div>
+    // Conditional Rendering
+
+    return listOfRestaurants.length === 0 ? (//conditional rendering
+        <div className='shimmer-body'>
+            <div className='shimmer-search'><button>Search</button></div>
+            <div className='shimmer-res-container'>
+                <Shimmer/>
             </div>
-        )
-    }
-
-    return (
+        </div>
+    ) : (
         <div className='body'>
             <div className='search'>
-                {/* <input className='search-input' type='text'/> */}
-                <button onClick={filterFood}>Search</button>
+                <input className='search-input' type='text' onChange={(e) => setSearchText(e.target.value)} value={searchText}/>
+                <button onClick={
+                    () => setFilteredRestaurants(
+                        listOfRestaurants.filter(res => (res.info.name).toLowerCase().includes(searchText.toLocaleLowerCase()))
+                    )
+                }>Search</button>
+                <button onClick={filterFood}>Top Rated Restaurant</button>
             </div>
             <div className='res-container'>
                 {
-                    listOfRestaurants.map((restaurant) => <RestaurantCard key={restaurant.info.id} resData={restaurant}/>)
+                    filteredRestaurants.map((restaurant) => <RestaurantCard key={restaurant.info.id} resData={restaurant}/>)
                 }
             </div>
         </div>
