@@ -10,4 +10,4 @@
 <p><a href="https://github.com/smrkhan21/namastereact/tree/EP04">4. Episode 4: Talk is cheap, show me the code</a></p>
 <p><a href="https://github.com/smrkhan21/namastereact/tree/EP05">5. Episode 5: Let's get Hooked</a></p>
 <p><a href="https://github.com/smrkhan21/namastereact/tree/EP06">6. Episode 6: Exploring the World</a></p>
-<p><a href="https://github.com/smrkhan21/namastereact/tree/EP07">7. Episode 7: Finding the Path</a></p>
+<p><a href="https://github.com/smrkhan21/namastereact/tree/EP07">7. Episode 7: Finding the Path</a></p> 
