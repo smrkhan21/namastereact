@@ -104,3 +104,128 @@
     border-radius: 20px;
     box-shadow: 5px 5px 25px -15px;
 }
+
+
+/* Style for Restaurant Menu */
+
+.menu {
+    width: 60%;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+.menu > .restaurant-detail {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    border-bottom: 1px dashed lightgray;
+    padding: 20px;
+}
+
+.left > .rest-name {
+    font-weight: 700;
+    font-size: 18px;
+    padding: 6px;
+}
+
+.left > .other, .left>.distance {
+    font-size: .93rem;
+    color: #7e808c;
+    padding: 3px;
+}
+
+.right {
+    border: 1px solid lightgrey;
+    padding: 10px ;
+    border-radius: 7px;
+}
+
+.right > .star {
+    color: #3d9b6d;
+    font-weight: 700;
+}
+
+.right > .ratings {
+    font-size: 10px;
+    color: #7e808c;
+    margin-top: 10px !important;
+    border-top: 1px solid lightgrey;
+    padding-top: 10px;
+}
+
+.offers {
+    display: flex;
+    flex-wrap: wrap;
+    border-bottom: 1px dashed lightgray;
+    padding: 25px;
+}
+
+.offers > p > span{
+    padding: 10px;
+    font-weight: 700;
+    margin-right: 10px;
+}
+
+.svg {
+    margin: -3px !important;
+}
+
+.filter {
+    font-size: 1rem;
+    color: #3d4152;
+    font-weight: 600;
+    border-bottom: 1px solid lightgray;
+    padding: 25px 15px;
+    margin: 20px 0px;
+}
+
+.type-header, .rest-content {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.rest-content {
+    font-size: 1rem;
+    border-bottom: 1px solid lightgray;
+    margin: 20px 0px;
+    padding: 30px 10px;
+}
+
+.itemName {
+    font-weight: 600;
+    padding: 10px 0px;
+}
+.itemPrice>.original-price {
+    font-size: 10px;
+    color: #3d4152;
+    text-decoration: line-through;
+    padding: 2px;
+}
+
+.item>.itemPrice>.discounted-price {
+    font-size: 13px;
+    padding: 2px;
+    color: #32343f;
+}
+
+.item > .description {
+    font-size: 13px;
+    padding: 25px 0px;
+    color: rgba(40,44,63,.45);
+}
+
+.item-image>img {
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.restaurant-items-content {
+    display: none;
+}
+
+.restaurant-items-content.active {
+    display: block;
+}
+
+/* End */
